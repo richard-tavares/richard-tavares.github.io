@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Richard Tavares | Desenvolvedor Full Stack</title>
+    <meta name="description" content="Desenvolvedor Full Stack com mais de 5 anos de experiência em PHP, Laravel, React.js, Vue.js e arquiteturas escaláveis." />
+    <script>(function () { var s = document.createElement('style'); s.textContent = '#page-progress{position:fixed;top:0;left:0;height:2px;width:0;background:#f97316;z-index:9999;transition:width .4s ease,opacity .35s ease;pointer-events:none}'; document.head.appendChild(s); var bar = document.createElement('div'); bar.id = 'page-progress'; document.documentElement.appendChild(bar); var done = false; function set(p) { bar.style.width = p + '%' } function finish() { if (done) return; done = true; set(100); setTimeout(function () { bar.style.opacity = '0'; setTimeout(function () { bar.remove() }, 350) }, 180) } set(15); document.addEventListener('readystatechange', function () { if (document.readyState === 'interactive') set(70); if (document.readyState === 'complete') finish() }); window.addEventListener('load', finish) })()</script>
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Geist:wght@300;400;500&display=swap" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="hero-glitch-wrapper">
+      <canvas id="glitch-canvas"></canvas>
+    </div>
+    <nav>
+      <div class="nav-inner container">
+        <a href="#home" class="nav-logo">
+          <span class="nav-logo-full">~/richard-tavares</span>
+          <span class="nav-logo-short">&lt;/&gt;</span>
+        </a>
+        <div class="nav-links">
+          <a href="#projects" class="nav-link" data-i18n="nav.projects">projetos</a>
+          <a href="#experience" class="nav-link" data-i18n="nav.experience">experiência</a>
+          <a href="#education" class="nav-link" data-i18n="nav.education">formação</a>
+        </div>
+        <div class="nav-end">
+          <button class="nav-lang-toggle" id="lang-toggle" aria-label="Switch language">
+            <span class="lang-option active" data-lang="pt-BR">PT</span>
+            <span class="lang-option" data-lang="en-US">EN</span>
+          </button>
+          <button class="nav-theme-toggle" role="switch" aria-checked="false" aria-label="Alternar tema" data-i18n-attr="aria-label:nav.aria.theme">
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5" />
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+            </svg>
+          </button>
+          <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false" data-i18n-attr="aria-label:nav.aria.menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="section hero fade-in">
+      <p class="hero-status">
+        <span class="hero-status-line"></span>
+        <span data-i18n="hero.status">seja bem-vindo</span>
+        <span class="hero-status-dot"></span>
+      </p>
+      <h1 class="hero-title">
+        <span data-i18n="hero.greeting">Olá, sou</span><br /><em>Richard Tavares</em>
+      </h1>
+      <h2 class="hero-subtitle cursor" data-i18n="hero.subtitle">
+        Desenvolvedor Full Stack
+      </h2>
+      <p class="hero-bio" data-i18n="hero.bio">
+        Mais de 5 anos construindo soluções com arquiteturas desacopladas, microsserviços e APIs RESTful,
+        priorizando manutenibilidade, performance e qualidade em cada decisão técnica.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary" data-i18n="hero.cta">ver projetos →</a>
+        <div class="hero-socials">
+          <a href="https://github.com/richard-tavares" target="_blank" aria-label="GitHub" class="social-icon">
+            <i class="devicon-github-original"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/richard-tavares/" target="_blank" aria-label="LinkedIn" class="social-icon">
+            <i class="devicon-linkedin-plain"></i>
+          </a>
+          <a href="mailto:richard.jstavares@gmail.com" aria-label="Email" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="45px" height="45px" viewBox="0 0 24 24">
+              <path fill="currentColor" d="m18.73 5.41l-1.28 1L12 10.46L6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="stack-strip fade-in">
+      <div class="marquee-outer">
+        <div class="marquee-inner">
+          <span class="stack-item"><i class="devicon-php-plain colored"></i><span>PHP</span></span>
+          <span class="stack-item"><i class="devicon-laravel-plain colored"></i><span>Laravel</span></span>
+          <span class="stack-item"><i class="devicon-vuejs-plain colored"></i><span>Vue.js</span></span>
+          <span class="stack-item"><i class="devicon-react-plain colored"></i><span>React</span></span>
+          <span class="stack-item"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></span>
+          <span class="stack-item"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></span>
+          <span class="stack-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></span>
+          <span class="stack-item"><i class="devicon-tailwindcss-plain colored"></i><span>Tailwind</span></span>
+          <span class="stack-item"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></span>
+          <span class="stack-item"><i class="devicon-jquery-plain colored"></i><span>jQuery</span></span>
+          <span class="stack-item"><i class="devicon-html5-plain colored"></i><span>HTML</span></span>
+          <span class="stack-item"><i class="devicon-css3-plain colored"></i><span>CSS</span></span>
+          <span class="stack-item"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></span>
+          <span class="stack-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></span>
+          <span class="stack-item"><i class="devicon-microsoftsqlserver-plain colored"></i><span>SQL Server</span></span>
+          <span class="stack-item"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></span>
+          <span class="stack-item"><i class="devicon-redis-plain colored"></i><span>Redis</span></span>
+          <span class="stack-item"><i class="devicon-docker-plain colored"></i><span>Docker</span></span>
+          <span class="stack-item"><i class="devicon-git-plain colored"></i><span>Git</span></span>
+          <span class="stack-item"><i class="devicon-swagger-plain colored"></i><span>Swagger</span></span>
+          <span class="stack-item"><i class="devicon-postman-plain colored"></i><span>Postman</span></span>
+        </div>
+      </div>
+    </div>
+
+    <section id="projects" class="section fade-in">
+      <div class="section-header">
+        <p class="section-label" data-i18n="projects.label">// trabalhos selecionados</p>
+        <p class="section-title" data-i18n="projects.title">Projetos</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="assets/img/projects/yugioh-card-maker.png" alt="Yu-Gi-Oh Card Maker" />
+            <span class="placeholder" data-i18n="project.placeholder">// capa em breve</span>
+          </div>
+          <div class="project-body">
+            <h4 class="entry-title">Yu-Gi-Oh! Card Maker</h4>
+            <p class="entry-desc" data-i18n="project.yugioh.desc">
+              Criador de cartas customizadas com editor visual e exportação de imagem via Canvas.
+            </p>
+            <div class="project-links">
+              <a href="https://richard-tavares.github.io/yugioh-card-maker" target="_blank" class="project-link project-link-demo" data-i18n="project.demo">demo ↗</a>
+              <a href="https://github.com/richard-tavares/yugioh-card-maker" target="_blank" class="project-link project-link-repo" data-i18n="project.code">código ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="assets/img/projects/pokedex.png" alt="Pokédex" />
+            <span class="placeholder" data-i18n="project.placeholder">// capa em breve</span>
+          </div>
+          <div class="project-body">
+            <h4 class="entry-title">Pokédex</h4>
+            <p class="entry-desc" data-i18n="project.pokedex.desc">
+              Enciclopédia interativa consumindo a PokéAPI, com busca e visualização de detalhes.
+            </p>
+            <div class="project-links">
+              <a href="https://richard-tavares.github.io/pokedex" target="_blank" class="project-link project-link-demo" data-i18n="project.demo">demo ↗</a>
+              <a href="https://github.com/richard-tavares/pokedex" target="_blank" class="project-link project-link-repo" data-i18n="project.code">código ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="assets/img/projects/movie-randomizer.png" alt="Movie Randomizer" />
+            <span class="placeholder" data-i18n="project.placeholder">// capa em breve</span>
+          </div>
+          <div class="project-body">
+            <h4 class="entry-title">Movie Randomizer</h4>
+            <p class="entry-desc" data-i18n="project.movie.desc">
+              Sorteiador de filmes integrado à API do TMDB (The Movie Database).
+            </p>
+            <div class="project-links">
+              <a href="https://richard-tavares.github.io/movie-randomizer" target="_blank" class="project-link project-link-demo" data-i18n="project.demo">demo ↗</a>
+              <a href="https://github.com/richard-tavares/movie-randomizer" target="_blank" class="project-link project-link-repo" data-i18n="project.code">código ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="assets/img/projects/calorie-calculator.png" alt="Calorie Calculator" />
+            <span class="placeholder" data-i18n="project.placeholder">// capa em breve</span>
+          </div>
+          <div class="project-body">
+            <h4 class="entry-title">Calorie Calculator</h4>
+            <p class="entry-desc" data-i18n="project.calorie.desc">
+              Calculadora de calorias com base na Tabela Brasileira de Composição de Alimentos - TACO.
+            </p>
+            <div class="project-links">
+              <a href="https://richard-tavares.github.io/calorie-calculator" target="_blank" class="project-link project-link-demo" data-i18n="project.demo">demo ↗</a>
+              <a href="https://github.com/richard-tavares/calorie-calculator" target="_blank" class="project-link project-link-repo" data-i18n="project.code">código ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="assets/img/projects/tekken8.png" alt="Tekken 8 Fan Page" />
+            <span class="placeholder" data-i18n="project.placeholder">// capa em breve</span>
+          </div>
+          <div class="project-body">
+            <h4 class="entry-title">Tekken 8 Fan Page</h4>
+            <p class="entry-desc" data-i18n="project.tekken.desc">
+              Página temática com design imersivo, animações e referências visuais do jogo.
+            </p>
+            <div class="project-links">
+              <a href="https://richard-tavares.github.io/tekken8" target="_blank" class="project-link project-link-demo" data-i18n="project.demo">demo ↗</a>
+              <a href="https://github.com/richard-tavares/tekken8" target="_blank" class="project-link project-link-repo" data-i18n="project.code">código ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="assets/img/projects/clone-mercado-livre.png" alt="Clone Mercado Livre" />
+            <span class="placeholder" data-i18n="project.placeholder">// capa em breve</span>
+          </div>
+          <div class="project-body">
+            <h4 class="entry-title">Clone Mercado Livre</h4>
+            <p class="entry-desc" data-i18n="project.meli.desc">
+              Recriação fiel da interface consumindo a API do Mercado Livre.
+            </p>
+            <div class="project-links">
+              <a href="https://richard-tavares.github.io/clone-mercado-livre" target="_blank" class="project-link project-link-demo" data-i18n="project.demo">demo ↗</a>
+              <a href="https://github.com/richard-tavares/clone-mercado-livre" target="_blank" class="project-link project-link-repo" data-i18n="project.code">código ↗</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="experience" class="section fade-in">
+      <div class="section-header section-header-lg">
+        <p class="section-label" data-i18n="exp.label">// trajetória profissional</p>
+        <p class="section-title" data-i18n="exp.title">Experiência</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <p class="entry-date" data-i18n="exp.1.date">NOV 2025 — PRESENTE</p>
+          <p class="entry-title" data-i18n="exp.job.title">Desenvolvedor Full Stack</p>
+          <p class="entry-org">Join Creative Tech</p>
+          <p class="timeline-location" data-i18n="exp.1.location">Remoto · Porto Alegre, Rio Grande do Sul, Brasil</p>
+          <p class="entry-desc" data-i18n="exp.1.desc">
+            Desenvolvimento de plataforma pública de dados para entidade governamental,
+            seguindo padrões gov.br de acessibilidade, segurança e governança.
+            Atuação em arquitetura baseada em microsserviços, documentação de APIs com Swagger/OpenAPI
+            e manutenção de altos padrões de qualidade com SonarQube,
+            revisão de código e boas práticas de engenharia.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <p class="entry-date" data-i18n="exp.2.date">JUL 2025 — SET 2025</p>
+          <p class="entry-title" data-i18n="exp.job.title">Desenvolvedor Full Stack</p>
+          <p class="entry-org">DevSquad LLC</p>
+          <p class="timeline-location" data-i18n="exp.2.location">Remoto · Salt Lake City, Utah, Estados Unidos</p>
+          <p class="entry-desc" data-i18n="exp.2.desc">
+            Projetos internacionais com TALL Stack (Tailwind CSS, Alpine.js, Laravel e Livewire), modernização de sistemas legados, jobs assíncronos
+            com Redis e processamento em lote. Ciclos de entrega com alto padrão de qualidade usando
+            TDD, PHPStan e Pest.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <p class="entry-date" data-i18n="exp.3.date">AGO 2022 — ABR 2025</p>
+          <p class="entry-title" data-i18n="exp.job.title">Desenvolvedor Full Stack</p>
+          <p class="entry-org">iRede — Instituto de Gestão, Redes Tecnológicas e Energias</p>
+          <p class="timeline-location" data-i18n="exp.3.location">Híbrido · Extrema, Minas Gerais, Brasil</p>
+          <p class="entry-desc" data-i18n="exp.3.desc">
+            Modernização e evolução de sistema PLM (Product Lifecycle Management) crítico,
+            conduzindo migração de PHP legado para Laravel e Vue.js,
+            além da redefinição da arquitetura e padrões técnicos da aplicação.
+            Contribuição no desenvolvimento de um MES (Manufacturing Execution System)
+            integrado a equipamentos industriais via MQTT
+            e sistemas corporativos utilizando AWS SQS/SNS,
+            garantindo rastreabilidade operacional e métricas em tempo real.
+            Atuação em modelagem de banco de dados, otimização de performance,
+            definição de arquitetura e mentoria para desenvolvedores juniores.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <p class="entry-date" data-i18n="exp.4.date">JUL 2019 — JUL 2022</p>
+          <p class="entry-title" data-i18n="exp.job.title">Desenvolvedor Full Stack</p>
+          <p class="entry-org">Multilaser Industrial S/A</p>
+          <p class="timeline-location" data-i18n="exp.4.location">Presencial · Extrema, Minas Gerais, Brasil</p>
+          <p class="entry-desc" data-i18n="exp.4.desc">
+            Desenvolvimento e modernização de sistema IMS (Integrated Management System)
+            crítico para operações industriais no Brasil e China,
+            com foco em controle de qualidade, auditoria e rastreabilidade de processos.
+            Atuação na evolução da arquitetura da aplicação,
+            hardening de segurança e modernização da stack
+            com migração de PHP 5.4/MySQL 5 para PHP 8/MySQL 8
+            utilizando Nginx e PHP-FPM.
+            Implementação de otimizações de performance,
+            melhorias de observabilidade e mitigação de vulnerabilidades.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="education" class="section fade-in">
+      <div class="section-header">
+        <p class="section-label" data-i18n="edu.label">// base acadêmica</p>
+        <p class="section-title" data-i18n="edu.title">Formação</p>
+      </div>
+
+      <div class="education-card">
+        <div class="education-card-header">
+          <p class="entry-date" data-i18n="edu.date">OUT 2021 — OUT 2024</p>
+          <span class="badge badge-gray" data-i18n="edu.badge">concluído</span>
+        </div>
+        <p class="entry-title" data-i18n="edu.degree">Tecnólogo em Análise e Desenvolvimento de Sistemas</p>
+        <p class="entry-org">UNINTER Centro Universitário Internacional</p>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <p class="footer-made" data-i18n="footer.made">Feito com HTML + CSS + JavaScript</p>
+        <p class="footer-copy">© <span id="footer-year"></span> Richard Tavares</p>
+      </div>
+      <div class="footer-icons">
+        <a href="https://github.com/richard-tavares" target="_blank" aria-label="GitHub" class="social-icon">
+          <i class="devicon-github-original"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/richard-tavares/" target="_blank" aria-label="LinkedIn" class="social-icon">
+          <i class="devicon-linkedin-plain"></i>
+        </a>
+        <a href="mailto:richard.jstavares@gmail.com" aria-label="Email" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="45px" height="45px" viewBox="0 0 24 24">
+            <path fill="currentColor" d="m18.73 5.41l-1.28 1L12 10.46L6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64"></path>
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <script src="assets/js/translations.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+
+</html>
