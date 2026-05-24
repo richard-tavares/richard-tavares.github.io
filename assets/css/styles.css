@@ -196,6 +196,19 @@ footer {
   color: var(--text-muted);
 }
 
+.badge-accent {
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+}
+
+.project-card .entry-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
 .section-label {
   font-size: 0.8125rem;
   color: var(--text-secondary);
@@ -697,6 +710,66 @@ nav {
 .project-card:hover {
   border-color: var(--border-400);
   background: var(--bg-card);
+}
+
+/* =====================
+   WARNING TAPE
+   ===================== */
+.warning-tape {
+  position: relative;
+  overflow: hidden;
+}
+
+.warning-tape__band {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  width: 160%;
+  height: 17px;
+  transform: translate(-50%, -50%) rotate(0deg);
+  pointer-events: none;
+  user-select: none;
+  border: none;
+}
+
+.warning-tape__stripe {
+  background: repeating-linear-gradient(
+    -45deg,
+    #000 0px,
+    #000 7px,
+    var(--accent) 7px,
+    var(--accent) 16px
+  );
+  z-index: 8;
+}
+
+.warning-tape__stripe--a {
+  transform: translate(-50%, -50%) rotate(-15deg);
+  z-index: 7;
+}
+
+.warning-tape__stripe--b {
+  transform: translate(-50%, -50%) rotate(15deg);
+  z-index: 8;
+}
+
+.warning-tape__msg {
+  background: var(--accent);
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  color: #000;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.45);
 }
 
 .project-thumb {

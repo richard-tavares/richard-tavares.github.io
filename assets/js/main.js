@@ -30,6 +30,11 @@ function applyLang(lang) {
     opt.classList.toggle('active', opt.dataset.lang === lang);
   });
 
+  document.querySelectorAll('.warning-tape__msg[data-tape-i18n]').forEach(el => {
+    const val = translations[lang][el.dataset.tapeI18n];
+    if (val !== undefined) el.textContent = buildTapeText(val);
+  });
+
   localStorage.setItem('lang', lang);
   currentLang = lang;
 }
@@ -124,6 +129,38 @@ function closeLightbox() {
 lightbox.querySelector('.lightbox-backdrop').addEventListener('click', closeLightbox);
 lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+// ── Warning Tape ──────────────────────────────────────────────────────────────
+function makeWarningBand(cls) {
+  const el = document.createElement('span');
+  el.className = 'warning-tape__band ' + cls;
+  el.setAttribute('aria-hidden', 'true');
+  return el;
+}
+
+function buildTapeText(message) {
+  return new Array(6).fill(message).join('  ●  ');
+}
+
+document.querySelectorAll('.warning-tape').forEach((card) => {
+  const i18nKey = (card.dataset.tapeI18n || '').trim();
+  const message = (card.dataset.tapeMessage || '').trim();
+
+  card.appendChild(makeWarningBand('warning-tape__stripe warning-tape__stripe--a'));
+  card.appendChild(makeWarningBand('warning-tape__stripe warning-tape__stripe--b'));
+
+  if (i18nKey || message) {
+    const msg = makeWarningBand('warning-tape__msg');
+    if (i18nKey) {
+      msg.dataset.tapeI18n = i18nKey;
+      const val = translations[currentLang]?.[i18nKey];
+      if (val) msg.textContent = buildTapeText(val);
+    } else {
+      msg.textContent = buildTapeText(message);
+    }
+    card.appendChild(msg);
+  }
+});
 
 // ── Project thumbnails ────────────────────────────────────────────────────────
 const overlayIcon = `
