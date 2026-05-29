@@ -2,6 +2,10 @@
 
 Portfolio pessoal desenvolvido com HTML, CSS e JavaScript puro — sem frameworks, sem dependências de build.
 
+Clique [aqui](https://richard-tavares.github.io/) para acessar.
+
+<img width="1920" height="1080" alt="portfolio-banner" src="https://github.com/user-attachments/assets/5858213c-f4ef-4efc-a729-0f307dddf8af" />
+
 ## Funcionalidades
 
 - Tema claro/escuro com persistência via `localStorage`
