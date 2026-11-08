@@ -1011,6 +1011,10 @@ nav {
   max-width: 32rem;
 }
 
+.timeline .entry-desc p + p {
+  margin-top: 0.75rem;
+}
+
 .timeline-location {
   font-family: var(--font-mono);
   font-size: 0.7rem;

@@ -34,10 +34,20 @@ Clique [aqui](https://richard-tavares.github.io/) para acessar.
 ├── assets/
 │   ├── css/
 │   │   └── styles.css
+│   ├── data/
+│   │   ├── experience.js    # experiências (PT/EN)
+│   │   └── projects.js      # projetos (PT/EN)
 │   ├── img/
 │   └── js/
-│       ├── main.js
-│       └── translations.js
+│       ├── core.js          # utilitários compartilhados
+│       ├── translations.js  # textos da interface
+│       ├── content.js       # renderização de projetos e experiência
+│       ├── ui.js            # menu, marquee, faixa de manutenção, animação de entrada
+│       ├── i18n.js          # troca de idioma e typewriter
+│       ├── glitch.js        # canvas de fundo
+│       ├── theme.js         # tema claro/escuro
+│       ├── lightbox.js      # ampliação das imagens
+│       └── main.js          # ordem de inicialização
 ├── index.html
 ├── robots.txt
 └── sitemap.xml
